@@ -33,7 +33,6 @@ def connect_mqtt():
 
 def publish(client, topic, message):
     result = client.publish(topic, message)
-    # result: [0, 1]
     status = result[0]
     if status == 0:
         print(f"Send {message} to topic {topic}")
